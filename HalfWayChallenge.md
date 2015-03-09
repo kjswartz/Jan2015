@@ -119,8 +119,8 @@
 
 27. What type of view templates have we been using in our class to create dynamic HTML?
 
-    Bootstrap
-    http://getbootstrap.com/getting-started/
+    ERB (Embedded Ruby)
+
 
 28. What type of helpers do we use to check data against certain rules and requirements before it is saved to our database?
 
