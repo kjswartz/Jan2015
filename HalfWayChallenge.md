@@ -50,7 +50,7 @@
 
 13. What is the difference between a Rails model and a database table? What is their relationship?
 
-    The model is the blueprint for building the database table. A Rails model  allows the user the ability to access a database table. The model defines associations and validations for information going into the table.
+    The model is an object, backed by a database (or some type of persistent        storage). The model defines associations and validations for information going into the table.
 
 14. How do we modify the database for our Rails app?
 
@@ -93,7 +93,7 @@
 
         <%= user.name.downcase %>
 
-        This would indicate that the name attribute for user is not set.
+        This would indicate that the name attribute for user is not set. The name is nil.
 
 23. What gem did we use to paginate our Collections?
 
@@ -168,8 +168,10 @@
 
     Used for repetitive database queries and called on like a method. They are defined within the class in the model section.
 
-    class Board < ActiveRecord::Base
-        scope :id, -> { order('id asc')}
+    class User < ActiveRecord::Base
+        scope :admin, -> {where(admin: true)}
+        scope :non_admin, -> {where(admin: false)}
+        scope :has_bio, -> {where("bio is not NULL")}
     end
 
     Then in rails console you can call Board.id and the call to the database will look like this:
