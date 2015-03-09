@@ -46,7 +46,7 @@
 
 12. What does the pattern MVC mean?
 
-    Model View Controller. It is a software architectural pattern that splits applications into three interconnected parts. This allows for the user to use a GUI for inputting and retrieving information from a application.
+    Model View Controller. It is a software architectural pattern that splits applications into three interconnected parts.
 
 13. What is the difference between a Rails model and a database table? What is their relationship?
 
