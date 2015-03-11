@@ -220,7 +220,7 @@
 
 41. If a User has many ParkingTickets, and the `user` variable points to a User object, what code would you use to get all the ParkingTickets?
 
-    user.parking_tickets.all
+    user.parking_tickets
 
 42. If an Address model has a postal code attribute, what code would you use to get all Addresses from the database with a postal code of _33771_?
 
